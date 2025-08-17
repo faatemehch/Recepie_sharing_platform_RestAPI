@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 import pymysql
+
 pymysql.version_info = (1, 4, 6, 'final', 0) # Adjust version as needed
 pymysql.install_as_MySQLdb()
 
@@ -23,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-l+bd(@25la2pft*6+_)m$&09lxq$isn&(rfv*4w5)h-8+u!(h2"
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -94,7 +96,7 @@ DATABASES = {
         'NAME': 'recepie',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': '22119674fch',
+        'PASSWORD': config('DATABASE_PASSWORD'),
     }
 }
 
