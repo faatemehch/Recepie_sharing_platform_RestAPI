@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+from decouple import config # To hide sensitive information
 import pymysql
 
 pymysql.version_info = (1, 4, 6, 'final', 0) # Adjust version as needed
