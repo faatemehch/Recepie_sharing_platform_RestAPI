@@ -49,11 +49,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    # Thits-party apps
+    # Third-party apps
     "debug_toolbar",
 
     # Local apps
     "recipes.apps.RecipesConfig",
+    "core.apps.CoreConfig"
 ]
 
 MIDDLEWARE = [
