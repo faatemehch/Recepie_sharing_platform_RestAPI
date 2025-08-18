@@ -3,4 +3,5 @@ from django.contrib.auth.models import AbstractUser
 
 
 class CostumeUser(AbstractUser):
-    pass
+    email = models.EmailField(unique=True)
+
