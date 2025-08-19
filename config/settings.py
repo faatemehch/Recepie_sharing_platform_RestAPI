@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     # Third-party apps
     "debug_toolbar",
+    "rest_framework",
 
     # Local apps
     "recipes.apps.RecipesConfig",
