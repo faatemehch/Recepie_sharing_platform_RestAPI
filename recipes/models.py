@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.conf import settings
 
 class Tag(models.Model):
     name = models.CharField(max_length=64)
@@ -16,7 +16,7 @@ class Recepie(models.Model):
     )
     title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(unique=True, db_index=True)
-    # author = models.ForeignKey()
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.PROTECT)
     short_description = models.CharField(max_length=255)
     ingredients = models.TextField()
     instructions = models.TextField()
