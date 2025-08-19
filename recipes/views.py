@@ -11,6 +11,9 @@ class RecipeViewSet(ModelViewSet):
     queryset = Recipe.objects.filter(is_active=True, is_public=True)
     permission_classes = [IsAuthenticated]
 
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
 
 class TagViewSet(ModelViewSet):
     serializer_class = TagSerializer

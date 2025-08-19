@@ -17,11 +17,12 @@ class RecipeSerializer(serializers.ModelSerializer):
         queryset=Tag.objects.all(),
         slug_field="name"
     )
+
     class Meta:
         model = Recipe
         fields = ("id", "title", "slug", "author", "short_description", "ingredients", "calories_per_serving",
                   "difficulty", "tags")
-        read_only_fields = ("slug",)
+        read_only_fields = ("slug", "author",)
 
     def create(self, validated_data):
         tags = validated_data.pop("tags", [])
