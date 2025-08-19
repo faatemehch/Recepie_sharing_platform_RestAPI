@@ -12,4 +12,10 @@ class RecipeViewSet(ModelViewSet):
     permission_classes = [IsAuthenticated]
 
 
+class TagViewSet(ModelViewSet):
+    serializer_class = TagSerializer
+    queryset = Tag.objects.all()
+    permission_classes = [IsAuthenticated]
+
+
 
