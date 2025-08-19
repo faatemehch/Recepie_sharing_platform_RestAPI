@@ -8,7 +8,7 @@ class Tag(models.Model):
         return str(self.name)
 
 
-class Recepie(models.Model):
+class Recipe(models.Model):
     DIFFICULTY = (
         ('e', 'Easy'),
         ('m', 'Medium'),

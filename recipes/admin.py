@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from .models import Recepie, Tag
+from .models import Recipe, Tag
 
 
-@admin.register(Recepie)
-class RecepieAdmin(admin.ModelAdmin):
+@admin.register(Recipe)
+class RecipeAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at', 'is_public', 'is_active', 'difficulty',)
     list_per_page = 10
     list_editable = ('is_active', 'difficulty',)
