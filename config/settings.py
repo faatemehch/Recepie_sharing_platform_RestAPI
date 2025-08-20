@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from decouple import config  # To hide sensitive information
 import pymysql
+from datetime import timedelta
 
 pymysql.version_info = (1, 4, 6, 'final', 0)  # Adjust version as needed
 pymysql.install_as_MySQLdb()
@@ -141,3 +142,14 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Auth config
 AUTH_USER_MODEL = 'core.CostumeUser'
+
+# DRF config
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('JWT', ),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+}
