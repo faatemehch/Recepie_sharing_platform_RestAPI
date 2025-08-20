@@ -36,10 +36,9 @@ A robust RESTful API for a recipe sharing platform built with Django REST Framew
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Django 4.2+, Django REST Framework
+- **Backend**: Django 5.0+, Django REST Framework
 - **Authentication**: Djoser with Simple JWT
-- **Database**: PostgreSQL (with SQLite for development)
-- **Image Handling**: Django Storages (AWS S3 ready)
+- **Database**: MySQL (with SQLite for development)
 - **API Docs**: Swagger/OpenAPI with drf-yasg
 - **Testing**: Pytest with factory_boy
 
@@ -54,5 +53,27 @@ A robust RESTful API for a recipe sharing platform built with Django REST Framew
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/recipe-sharing-api.git
-   cd recipe-sharing-api
+   git clone [https://github.com/your-username/recipe-sharing-api.git](https://github.com/faatemehch/Recepie_sharing_platform_RestAPI.git)
+   cd recipe-sharing-platforn-api
+
+2. **Set up virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # Linux/Mac
+   venv\Scripts\activate  # Windows
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   
+4. **Environment configuration**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your database and secret key
+5. **Database setup**
+   ```bash
+   python manage.py migrate
+   python manage.py createsuperuser
+6. **Run development server**
+   ```bash
+   python manage.py runserver
