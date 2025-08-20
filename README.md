@@ -5,7 +5,7 @@
 ![Django REST Framework](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Djoser](https://img.shields.io/badge/Djoser-2.0-blue?style=for-the-badge)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/MySQL-316192?style=for-the-badge&logo=mysql&logoColor=white)
 
 A robust RESTful API for a recipe sharing platform built with Django REST Framework. Features complete user authentication with Djoser, JWT tokens, recipe management, and social features for food enthusiasts.
 
@@ -47,7 +47,7 @@ A robust RESTful API for a recipe sharing platform built with Django REST Framew
 
 ### Prerequisites
 - Python 3.10+
-- PostgreSQL
+- MySQL
 - pip
 
 ### Installation
