@@ -39,8 +39,6 @@ A robust RESTful API for a recipe sharing platform built with Django REST Framew
 - **Backend**: Django 5.0+, Django REST Framework
 - **Authentication**: Djoser with Simple JWT
 - **Database**: MySQL (with SQLite for development)
-- **API Docs**: Swagger/OpenAPI with drf-yasg
-- **Testing**: Pytest with factory_boy
 
 ## 🚀 Quick Start
 
