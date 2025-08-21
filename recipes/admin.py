@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Recipe, Tag
+from .models import Recipe, Tag, Customer, Comment
 
 
 @admin.register(Recipe)
@@ -17,5 +17,17 @@ class RecipeAdmin(admin.ModelAdmin):
 
 @admin.register(Tag)
 class TagAdmin(admin.ModelAdmin):
-    list_display = ('name', )
+    list_display = ('name',)
+    list_display_links = ('name',)
+
+
+@admin.register(Customer)
+class CustomerAdmin(admin.ModelAdmin):
+    list_display = ('__str__','joined_at')
+    list_display_links = ('__str__',)
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('author','name','created_at')
     list_display_links = ('name',)

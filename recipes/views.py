@@ -9,7 +9,7 @@ from .serializers import RecipeSerializer, TagSerializer
 class RecipeViewSet(ModelViewSet):
     serializer_class = RecipeSerializer
     queryset = Recipe.objects.filter(is_active=True, is_public=True)
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user)
@@ -18,7 +18,4 @@ class RecipeViewSet(ModelViewSet):
 class TagViewSet(ModelViewSet):
     serializer_class = TagSerializer
     queryset = Tag.objects.all()
-    permission_classes = [IsAuthenticated]
-
-
-
+    # permission_classes = [IsAuthenticated]

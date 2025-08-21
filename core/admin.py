@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from .models import CostumeUser
+from .models import CustomUser
 
 
-@admin.register(CostumeUser)
-class CostumeUserAdmin(admin.ModelAdmin):
+@admin.register(CustomUser)
+class CustomUserAdmin(admin.ModelAdmin):
     list_display = ('username', 'email')
     search_fields = ('username', 'email')
     list_filter = ('username', 'email')
