@@ -2,7 +2,19 @@ from django.utils.text import slugify
 
 from rest_framework import serializers
 
-from .models import Recipe, Tag
+from .models import Recipe, Tag, Comment, Customer
+
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = ("recipe", "author", "name", "text",)
+
+
+class CustomerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Customer
+        fields = ("user", "phone_number", "birth_date",)
 
 
 class TagSerializer(serializers.ModelSerializer):
