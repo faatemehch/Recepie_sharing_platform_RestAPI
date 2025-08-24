@@ -43,7 +43,7 @@ class Customer(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.user.username
+        return self.user
 
     class Meta:
         verbose_name_plural = "Customers"

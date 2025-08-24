@@ -22,6 +22,19 @@ class TagSerializer(serializers.ModelSerializer):
         model = Tag
         fields = ("id", "name",)
 
+# ---------------------------- Recipe ----------------------------
+class RecipeUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Recipe
+        fields = ('title', 'short_description', 'ingredients','instructions', 'calories_per_serving')
+
+
+class RecipeCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Recipe
+        fields = ('title', 'short_description', 'ingredients','instructions', 'calories_per_serving')
+
+
 
 class RecipeSerializer(serializers.ModelSerializer):
     tags = serializers.SlugRelatedField(
